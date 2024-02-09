@@ -15,7 +15,7 @@ where first_name ILIKE 'M%'
 * Question: How many people's name start with A and end with R?
 * Expected output: 1846
 */
-
+SELECT count(emp_no)from employees WHERE first_name ILIKE 'a%r'
                                                   
 /*
 * DB: Store
