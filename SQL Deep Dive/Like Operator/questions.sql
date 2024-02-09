@@ -23,7 +23,7 @@ SELECT count(emp_no)from employees WHERE first_name ILIKE 'a%r'
 * Question: How many people's zipcode have a 2 in it?.
 * Expected output: 4211 
 */
-
+SELECT count(customerid) FROM customers WHERE zip::text LIKE '%2%'
 
 
 /*
