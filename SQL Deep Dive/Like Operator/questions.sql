@@ -41,4 +41,4 @@ SELECT count(customerid) FROM customers WHERE zip::text like '2_1%'
 * Replace null values with "No State"                                                  
 * Expected output: https://imgur.com/AVe6G4c
 */
-
+SELECT COALESCE(state, 'No State') as "State" from customers WHERE phone::text LIKE '302%'
