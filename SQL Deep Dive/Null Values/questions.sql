@@ -10,3 +10,4 @@ SELECT avg(coalesce(age, 15)) from "Student";
 * Question: 
 * Replace all empty first or last names with a default?
 */
+SELECT id, coalesce(name, 'John'), coalesce(lastName, 'Doe'), age FROM "Student"
