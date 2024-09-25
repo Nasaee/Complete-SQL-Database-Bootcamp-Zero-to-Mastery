@@ -3,7 +3,11 @@
 *  Show me all the employees, hired after 1991, that have had more than 2 titles
 *  Database: Employees
 */
-
+SELECT e.emp_no, count(t.title) as "titleAmount" FROM employees as e 
+JOIN titles as t using(emp_no)
+where EXTRACT(YEAR FROM e.hire_date) > 1991
+group by e.emp_no
+HAVING count(t.title) > 2
 
 
 /*
