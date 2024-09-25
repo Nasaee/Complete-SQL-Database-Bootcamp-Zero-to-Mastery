@@ -26,4 +26,7 @@ HAVING count(s.salary) > 15
 *  Show me all the employees that have worked for multiple departments
 *  Database: Employees
 */
-
+SELECT e.emp_no, count(de.dept_no) from employees as e
+JOIN dept_emp as de USING(emp_no)
+group by e.emp_no
+HAVING count(de.dept_no) > 1
